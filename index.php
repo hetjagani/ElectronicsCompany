@@ -1,5 +1,21 @@
 <?php
     session_start();
+    
+    if(isset($_SESSION["user_id"])) {
+        $session_user = $_SESSION["user_id"];
+        $query = sprintf("SELECT e_password FROM employee WHERE e_id = %s LIMIT 1;", $session_user);
+
+        if($query_run = mysqli_query($conn, $query)) {
+            $data = mysqli_fetch_assoc($query_run);
+
+            $str_tok = sprintf("%s:%s", $session_user, $data['e_password']);
+            $token = md5($str_tok);
+
+            if($token === $_COOKIE['auth_token']) {
+                header("Location: ./general_manager/homepage.php");
+            }
+        }
+    } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +38,7 @@
     <form class="form-signin" method="POST" action="login.php">
         <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
         <input class="btn btn-lg btn-primary btn-block" type="submit" name="submit">
     </form>
