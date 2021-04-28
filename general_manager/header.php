@@ -24,6 +24,8 @@
         <li class="nav-item">
           <a class="nav-link" href="./suppliers.php">Suppliers</a>
         </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <?php echo $user_data['e_fname'].' '.$user_data['e_lname']; ?>
