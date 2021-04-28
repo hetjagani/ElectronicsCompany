@@ -66,12 +66,12 @@
             echo '<td>'.$row['p_desc'].'</td>';
             echo '<td>'.$row['p_start_date'].'</td>';
             echo '<td>'.$row['p_end_date'].'</td>';
-            echo '<td>'.$row['p_cost'].'</td>';
             echo '<td>'.$row['p_status'].'</td>';
+            echo '<td>'.$row['p_cost'].'</td>';
             echo '<td>'.$employee_map[$row['e_id']].'</td>';
             echo '<td>'.$customer_map[$row['c_id']].'</td>';
-            echo '<td><a type="button" class="btn btn-primary" href="update_project.php?id='.$row['se_id'].'">Update</a></td>';
-            echo '<td><a type="button" class="btn btn-danger" href="db_delete_project.php?id='.$row['se_id'].'">Delete</a></td>';
+            echo '<td><a type="button" class="btn btn-primary" href="update_project.php?id='.$row['p_id'].'">Update</a></td>';
+            echo '<td><a type="button" class="btn btn-danger" href="db_delete_project.php?id='.$row['p_id'].'">Delete</a></td>';
             echo '</tr>';
         }
     ?>

@@ -40,13 +40,13 @@
         <div class="row mb-3">
             <label for="name" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="name" name="name" value=<?php echo $service_data['se_name']; ?>>
+            <input type="text" class="form-control" id="name" name="name" value="<?php echo $service_data['se_name']; ?>">
             </div>
         </div>
         <div class="row mb-3">
             <label for="type" class="col-sm-2 col-form-label">Type</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="type" name="type" value=<?php echo $service_data['se_type']; ?>>
+            <input type="text" class="form-control" id="type" name="type" value="<?php echo $service_data['se_type']; ?>">
             </div>
         </div>
         <div class="row mb-3">

@@ -40,13 +40,13 @@
         <div class="row mb-3">
             <label for="fname" class="col-sm-2 col-form-label">First Name</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="fname" name="fname" value=<?php echo $customer_data['c_fname']; ?> required>
+            <input type="text" class="form-control" id="fname" name="fname" value="<?php echo $customer_data['c_fname']; ?>" required>
             </div>
         </div>
         <div class="row mb-3">
             <label for="lname" class="col-sm-2 col-form-label">Last Name</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="lname" name="lname" value=<?php echo $customer_data['c_lname']; ?>  required>
+            <input type="text" class="form-control" id="lname" name="lname" value="<?php echo $customer_data['c_lname']; ?>"  required>
             </div>
         </div>
         <div class="row mb-3">
@@ -64,7 +64,7 @@
         <div class="row mb-3">
             <label for="addr" class="col-sm-2 col-form-label">Address</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="addr" name="addr" value=<?php echo $customer_data['c_addr']; ?>  required>
+            <input type="text" class="form-control" id="addr" name="addr" value="<?php echo $customer_data['c_addr']; ?>"  required>
             </div>
         </div>
         <div class="row mb-3">
