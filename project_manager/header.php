@@ -16,13 +16,13 @@
           <a class="nav-link" href="./projects.php">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./customers.php">Customers</a>
+          <a class="nav-link" href="./teams.php">Teams</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./services.php">Services</a>
+          <a class="nav-link" href="./tasks.php">Tasks</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./suppliers.php">Suppliers</a>
+          <a class="nav-link" href="./customer_orders.php">Customer Orders</a>
         </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 50px;">

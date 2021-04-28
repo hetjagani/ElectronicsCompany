@@ -23,7 +23,7 @@
                 }else if($query_data['e_type'] === "inventory_manager") {
                     header("Location: inventory_manager_home.php");
                 }else if($query_data['e_type'] === "project_manager") {
-                    header("Location: project_manager_home.php");
+                    header("Location: project_manager/index.php");
                 }else if($query_data['e_type'] === "employee") {
                     header("Location: employee.php");
                 }
