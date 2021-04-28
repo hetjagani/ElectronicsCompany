@@ -17,9 +17,9 @@
                 $_SESSION['employee_type'] = $query_data['e_type'];
                 $str_tok = sprintf("%s:%s", $query_data['e_id'], $query_data['e_password']);
                 $token = md5($str_tok);
-                setcookie("auth_token", $token, time()+60*60*24*30, "/", "dbms.hetjagani.com", 0);
+                setcookie("auth_token", $token, time()+60*60*24*30, "/", NULL, 0);
                 if($query_data['e_type'] === "general_manager") {
-                    header("Location: general_manager/homepage.php");
+                    header("Location: general_manager/index.php");
                 }else if($query_data['e_type'] === "inventory_manager") {
                     header("Location: inventory_manager_home.php");
                 }else if($query_data['e_type'] === "project_manager") {

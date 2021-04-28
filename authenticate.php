@@ -13,7 +13,7 @@
             $token = md5($str_tok);
 
             if($token != $_COOKIE['auth_token']) {
-                header("Location: http://dbms.hetjagani.com/ElectronicsCompany/index.php");
+                header("Location: /ElectronicsCompany/index.php");
             }
         }
     } else {
