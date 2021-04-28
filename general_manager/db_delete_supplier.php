@@ -7,9 +7,9 @@
 		header('Location: suppliers.php');
 	}
 
-    $delete_service_query = sprintf("DELETE FROM supplier WHERE s_id = %s", $_GET['id']);
+    $delete_supplier_query = sprintf("DELETE FROM supplier WHERE s_id = %s", $_GET['id']);
 
-	mysqli_query($conn, $delete_service_query) or die(mysqli_error($conn));
+	mysqli_query($conn, $delete_supplier_query) or die(mysqli_error($conn));
     
     header("Location: suppliers.php");
 ?>
