@@ -4,7 +4,7 @@
     require '../database.php';
 
 	if(!isset($_GET)) {
-		header('Location: create_service.php');
+		header('Location: services.php');
 	}
 
     $delete_service_query = sprintf("DELETE FROM service WHERE se_id = %s", $_GET['id']);

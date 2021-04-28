@@ -22,13 +22,13 @@
         <div class="row mb-3">
             <label for="name" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="name" name="name">
+            <input type="text" class="form-control" id="name" name="name" required>
             </div>
         </div>
         <div class="row mb-3">
             <label for="type" class="col-sm-2 col-form-label">Type</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="type" name="type">
+            <input type="text" class="form-control" id="type" name="type" required>
             </div>
         </div>
         <div class="row mb-3">
@@ -40,11 +40,13 @@
         <div class="row mb-3">
             <label for="cost" class="col-sm-2 col-form-label">Cost</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="cost" name="cost">
+            <input type="text" class="form-control" id="cost" name="cost" required>
             </div>
         </div>
 
-        <input type="submit" class="btn btn-primary"></input>
+        <div class="d-grid gap-2">
+            <input type="submit" class="btn btn-primary" value="CREATE"></input>
+        </div>
         </form>
 
     </div>
