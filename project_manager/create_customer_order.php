@@ -3,7 +3,7 @@
     require '../authenticate.php';
 
     // Create project id => name map
-    $project_query = "SELECT * FROM project;";
+    $project_query = sprintf("SELECT * FROM project WHERE e_id=%s;", $_SESSION['user_id']);
     $run_proj_query = mysqli_query($conn, $project_query) or die(mysqli_error($conn));
     $project_map = array();
     while($row = mysqli_fetch_assoc($run_proj_query)) {
