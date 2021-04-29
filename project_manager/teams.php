@@ -9,6 +9,14 @@
     while($row = mysqli_fetch_assoc($run_proj_query)) {
         $project_map[$row['p_id']] = $row['p_name'];
     }
+
+    // fetch projects related to logged in employess
+    $emp_project_query = sprintf("SELECT p_id FROM project WHERE e_id=%s;", $_SESSION['user_id']);
+    $run_proj_query = mysqli_query($conn, $emp_project_query) or die(mysqli_error($conn));
+    $emp_projects= array(0);
+    while($row = mysqli_fetch_assoc($run_proj_query)) {
+        array_push($emp_projects, $row['p_id']);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +48,7 @@
     </thead>
     <tbody>
     <?php
-        $teams_query = 'SELECT * FROM team;';
+        $teams_query = sprintf('SELECT * FROM team WHERE p_id IN (%s);', implode(',', $emp_projects));
 
         $run_query = mysqli_query($conn, $teams_query) or die(mysqli_error($conn));
 
