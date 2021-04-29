@@ -54,7 +54,7 @@
             echo '<td>'.$row['p_desc'].'</td>';
             echo '<td>'.$row['p_start_date'].'</td>';
             echo '<td>'.$row['p_end_date'].'</td>';
-            echo '<td>'.$row['status'].'</td>';
+            echo '<td>'.$row['p_status'].'</td>';
             echo '<td>'.$row['p_cost'].'</td>';
             echo '<td>'.$customer_map[$row['c_id']].'</td>';
             echo '</tr>';
