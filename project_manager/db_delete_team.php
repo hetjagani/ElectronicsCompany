@@ -17,7 +17,7 @@
         mysqli_commit($conn);
     } catch(mysqli_sql_exception $exp) {
         mysqli_rollback($conn);
-        throw exp;
+        throw $exp;
     }
     header("Location: teams.php");
 ?>
