@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $role = 'inventory_manager';
     require '../authenticate.php';
 
     // Create customer_order id => name map

@@ -15,6 +15,10 @@
             if($token != $_COOKIE['auth_token']) {
                 header("Location: /ElectronicsCompany/index.php");
             }
+
+            if($_SESSION['employee_type'] !== $role) {
+                header("Location: /ElectronicsCompany/".$_SESSION['employee_type']."/index.php");
+            }
         }
     } else {
         header("Location: index.php");

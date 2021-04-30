@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $role = 'project_manager';
     require '../authenticate.php';
 
     // Create employee id => name map

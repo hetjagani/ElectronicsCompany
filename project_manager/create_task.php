@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $role = 'project_manager';
     require '../authenticate.php';
 
     //create project id => name map

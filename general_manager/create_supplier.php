@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $role = 'general_manager';
     require '../authenticate.php';
 ?>
 
