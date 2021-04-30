@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project List</title>
+    <title>Projects</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/common.css">
 </head>
@@ -25,7 +25,7 @@
         require 'header.php';
     ?>
 
-    <h2>Project List</h2>
+    <h2>Projects</h2>
     <div class="container">
     <table class="table table-bordered">
     <thead>
