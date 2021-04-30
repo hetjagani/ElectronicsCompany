@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    if(isset($_SESSION) && isset($_COOKIE)) {
+    if(isset($_SESSION['user_id']) && isset($_SESSION['employee_type']) && isset($_COOKIE['auth_token'])) {
         header("Location: /ElectronicsCompany/".$_SESSION['employee_type']."/index.php");
     } 
 ?>
