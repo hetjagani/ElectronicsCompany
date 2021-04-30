@@ -21,7 +21,7 @@
                 if($query_data['e_type'] === "general_manager") {
                     header("Location: general_manager/index.php");
                 }else if($query_data['e_type'] === "inventory_manager") {
-                    header("Location: inventory_manager_home.php");
+                    header("Location: inventory_manager/index.php");
                 }else if($query_data['e_type'] === "project_manager") {
                     header("Location: project_manager/index.php");
                 }else if($query_data['e_type'] === "employee") {
