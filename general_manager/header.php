@@ -24,6 +24,9 @@
         <li class="nav-item">
           <a class="nav-link" href="./suppliers.php">Suppliers</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./items.php">Items</a>
+        </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="margin-right: 50px;">
         <li class="nav-item dropdown">
