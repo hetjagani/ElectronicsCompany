@@ -1,6 +1,14 @@
 <?php
     session_start();
     require '../authenticate.php';
+    // create service id => name map
+    $service_query = "SELECT * FROM service;";
+    $run_serv_query = mysqli_query($conn, $service_query) or die(mysqli_error($conn));
+    $service_map = array();
+    while($row = mysqli_fetch_assoc($run_serv_query)){
+        $service_map[$row['se_id']] = $row['se_name'];
+    }
+
 
     // Create employee id => name map
     $employee_query = "SELECT * FROM employee WHERE e_type='project_manager';";
@@ -74,6 +82,17 @@
             </div>
         </div>
         <div class="row mb-3">
+            <label for="services" class="col-form-label">Services (To select multiple hold Ctrl and select)</label>
+            <select id="services" class="form-select" aria-label="services" name="services[]" size="6" multiple required>
+                <?php
+                    foreach($service_map as $id => $name) {
+                        echo '<option value="'.$id.'">'.$name.'</option>';
+                    } 
+                ?>
+                
+            </select>
+        </div>
+        <div class="row mb-3">
             <label for="status" class="col-sm-2 col-form-label">Status</label>
             <select id="status" class="form-select" aria-label="Status" name="status">
                 <option value="complete">Complete</option>
@@ -102,7 +121,7 @@
                 
             </select>
         </div>
-
+        
         <div class="d-grid gap-2">
             <input type="submit" class="btn btn-primary" value="CREATE"></input>
         </div>

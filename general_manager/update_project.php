@@ -5,6 +5,22 @@
 	if(!isset($_GET)) {
 		header('Location: projects.php');
 	}
+    // fetch services data associated with projects
+    $get_services = 'SELECT * FROM service';
+    $run_get_serv = mysqli_query($conn,$get_services) or die(mysqli_error($conn));
+    $service_map = array();
+    
+    while($row = mysqli_fetch_assoc($run_get_serv)){
+        $service_map[$row['se_id']] = $row['se_name'];
+    }
+
+    $serv_prj_arr = array();
+    $get_serv_id = sprintf("SELECT se_id FROM provide_services WHERE p_id=%s", $_GET['id']);
+    $run_get_servid = mysqli_query($conn,$get_serv_id) or die(mysqli_error($conn));
+
+    while($row = mysqli_fetch_assoc($run_get_servid)){
+        array_push($serv_prj_arr,$row['se_id']);
+    }
 
     // Fetch project data
     $project_query = sprintf("SELECT * FROM project WHERE p_id=%s", $_GET['id']);
@@ -87,6 +103,21 @@
             <div class="col-sm-10">
             <input type="text" class="form-control" id="cost" name="cost" value=<?php echo $project_data['p_cost']; ?> required>
             </div>
+        </div>
+        <div class="row mb-3">
+            <label for="services" class="col-form-label">Services (To select multiple hold Ctrl and select)</label>
+            <select id="services" class="form-select" aria-label="Services" name="services[]" size="6" multiple required>
+                <?php
+                    foreach($service_map as $id => $name) {
+                        if(in_array($id, $serv_prj_arr)) {
+                            echo '<option selected value="'.$id.'">'.$name.'</option>';
+                        } else {
+                            echo '<option value="'.$id.'">'.$name.'</option>';
+                        }
+                    } 
+                ?>
+                
+            </select>
         </div>
         <div class="row mb-3">
             <label for="status" class="col-sm-2 col-form-label">Status</label>
