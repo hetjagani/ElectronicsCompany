@@ -41,6 +41,8 @@
                 echo '<li><a class="dropdown-item" href="#">Project Manager</a></li>';
               } else if($_SESSION['employee_type'] === 'inventory_manager') {
                 echo '<li><a class="dropdown-item" href="#">Inventory Manager</a></li>';
+              } else if ($_SESSION['employee_type'] === 'employee'){
+                echo '<li><a class="dropdown-item" href="#">Employee</a></li>';
               }
             ?>
             <li><hr class="dropdown-divider"></li>
