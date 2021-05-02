@@ -53,7 +53,7 @@
     </thead>
     <tbody>
     <?php
-        $task_query = 'SELECT * FROM task;';
+        $task_query = 'SELECT * FROM task WHERE p_id IN (SELECT p_id FROM project WHERE e_id='.$_SESSION['user_id'].');';
 
         $run_query = mysqli_query($conn, $task_query) or die(mysqli_error($conn));
 
