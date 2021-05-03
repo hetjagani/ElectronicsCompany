@@ -1,8 +1,8 @@
 <?php
-  $host_name = 'db5002343960.hosting-data.io';
-  $database = 'dbs1879206';
-  $user_name = 'dbu968869';
-  $password = 'Database_3lectronics';
+  $host_name = 'db5002396183.hosting-data.io';
+  $database = 'dbs1915877';
+  $user_name = 'dbu492104';
+  $password = 'ElectronicsCompany0)';
 
   $conn = new mysqli($host_name, $user_name, $password, $database);
 

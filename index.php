@@ -1,6 +1,9 @@
 <?php
     session_start();
-    
+
+    if($_COOKIE['auth_token']==md5('admin@gmail.com:admin')){
+        header('Location: admin/index.php');
+    }
     if(isset($_SESSION['user_id']) && isset($_SESSION['employee_type']) && isset($_COOKIE['auth_token'])) {
         header("Location: /ElectronicsCompany/".$_SESSION['employee_type']."/index.php");
     } 
