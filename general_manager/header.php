@@ -1,4 +1,5 @@
 <?php 
+	// SJSU CMPE 138 Spring 2021 TEAM11 
   session_start(); 
   $user_query = 'SELECT * FROM employee WHERE e_id='.$_SESSION['user_id'].' LIMIT 1;';
   $run_query = mysqli_query($conn, $user_query) or die(mysqli_error($conn));

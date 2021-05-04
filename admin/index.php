@@ -1,4 +1,5 @@
 <?php
+	// SJSU CMPE 138 Spring 2021 TEAM11 
     session_start();
     if($_COOKIE['auth_token']!=md5('admin@gmail.com:admin')){
         header('Location: ../index.php');

@@ -1,4 +1,5 @@
 <?php
+	// SJSU CMPE 138 Spring 2021 TEAM11 
     require 'database.php';
     session_start();
     

@@ -1,4 +1,5 @@
 <?php
+	// SJSU CMPE 138 Spring 2021 TEAM11 
   $host_name = 'db5002396183.hosting-data.io';
   $database = 'dbs1915877';
   $user_name = 'dbu492104';
